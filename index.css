@@ -13,7 +13,7 @@ html,
 body {
     overflow: hidden;
     /* background-image: url(assets/img/desktop_view_bg.gif); */
-    background: url(./assets/img/robot_bg.webp);
+    background: url(./robot_bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
