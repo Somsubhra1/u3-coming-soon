@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html,
@@ -13,39 +13,68 @@ html,
 body {
     overflow: hidden;
     /* background-image: url(assets/img/desktop_view_bg.gif); */
+    /* background: url(./robot_bg.webp); */
+    position: relative;
+}
+
+body::after {
+    content: "";
     background: url(./robot_bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .left,
 .right {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: left 1s ease-out;
-  background: rgb(255, 103, 15);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: left 1s ease-out;
+    background: rgb(255, 103, 15);
     z-index: 1;
 }
 
 .left {
-  left: 0;
-  width: 50%;
-  display: none;
-  clip-path: polygon(0 0, 100% 0, 100% 38%, 75% 44%, 75% 56%, 100% 62%, 100% 100%, 0 100% );
+    left: 0;
+    width: 50%;
+    /* display: none; */
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 38%,
+        75% 44%,
+        75% 56%,
+        100% 62%,
+        100% 100%,
+        0 100%
+    );
 }
 
 .right {
     left: 50%;
     width: 50%;
-    display: none;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 62%, 25% 56%, 25% 44%, 0 38%);
+    /* display: none; */
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 62%,
+        25% 56%,
+        25% 44%,
+        0 38%
+    );
 }
 
-.timer{
+.timer {
     position: absolute;
     top: 15%;
     height: 20%;
@@ -55,22 +84,22 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+    font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
     /* background: #000; */
 }
 
-.value{
+.value {
     font-size: 2.3rem;
     font-family: Impact, Helvetica, Arial;
     font-weight: bolder;
 }
 
-.tag{
+.tag {
     font-size: 1.7rem;
     font-weight: 400;
 }
 
-.reveal_btn{
+.reveal_btn {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -82,10 +111,10 @@ body {
     /* width: 20%; */
     height: 20%;
     cursor: pointer;
-    z-index : 2;
-}   
+    z-index: 2;
+}
 
-.title{
+.title {
     position: absolute;
     top: 62%;
     font-size: 3rem;
@@ -93,10 +122,11 @@ body {
     width: 60%;
     text-align: center;
     /* background: red; */
-    font-family: 'Black Ops One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Black Ops One", "Segoe UI", Tahoma, Geneva, Verdana,
+        sans-serif;
 }
 
-.tagline{
+.tagline {
     position: absolute;
     top: calc(62% + 3rem);
     left: 10%;
@@ -104,11 +134,11 @@ body {
     text-align: center;
     margin-top: 30px;
     font-size: 1.2rem;
-    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+    font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
 }
 
-@media screen and (min-width: 1220px){
-    .timer{
+@media screen and (min-width: 1220px) {
+    .timer {
         width: 60%;
         margin-left: 20%;
     }
